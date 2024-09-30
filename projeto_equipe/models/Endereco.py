@@ -9,8 +9,8 @@ class Endereco:
     def __str__(self) -> str:
         return (
             f"\nLogradouro: {self.logradouro}"
-            f"Número: {self.numero}"
-            f"Complemento: {self.complemento}"
-            f"CEP: {self.cep}"
-            f"Cidade: {self.cidade}"
+            f"\nNúmero: {self.numero}"
+            f"\nComplemento: {self.complemento}"
+            f"\nCEP: {self.cep}"
+            f"\nCidade: {self.cidade}"
         )
