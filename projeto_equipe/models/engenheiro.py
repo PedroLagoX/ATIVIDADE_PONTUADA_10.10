@@ -7,4 +7,4 @@ class Engenheiro(Funcionario):
         self.crea = crea
 
     def __str__(self) -> str:
-        return (f"{super().__str__()} \nCrea: {self.crea}")
+        return (f"{super().__str__()} \nCREA: {self.crea}")
