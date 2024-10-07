@@ -4,7 +4,11 @@ from projeto_equipe.models.funcionario import Funcionario
 class Medico(Funcionario):
     def __init__(self, nome: str, telefone: str, email: str, endereco: Endereco, crm:str) -> None:
         super().__init__(nome, telefone, email, endereco)
-        self.crm = crm
+        self.crm = self.__verificar_crm(crm)
+        self.telefone = self.__verificar_telefone(telefone)
+        self.nome = self.__verificar_nome(nome)
+        self.email = self.__verificar_email(email)
+
     def __verificar_nome(self,nome):
         try:
             if not nome:
@@ -36,15 +40,15 @@ class Medico(Funcionario):
         
         return email
    
-    def __verificar_crea(self,crea):
+    def __verificar_crm(self,crm):
         try:
-            if not crea:
-                raise ValueError("O crea não pode estar vazio")
-            if not isinstance(crea,str):
-                raise TypeError("O crea só pode ser uma string")
+            if not crm:
+                raise ValueError("O crm não pode estar vazio")
+            if not isinstance(crm,str):
+                raise TypeError("O crm só pode ser uma string")
         except(ValueError,TypeError) as erro:
             print(erro)
-        return crea
+        return crm
 
     def __str__(self) -> str:
         return (f"{super().__str__()} \nCRM: {self.crm}")

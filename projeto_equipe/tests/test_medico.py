@@ -6,7 +6,7 @@ endereco3=Endereco("Rua C","40","500","123023-123","Salvador")
 
 @pytest.fixture
 def medico_valido():
-    return Medico("","719828213","caiofernando@gmail.com",endereco3,"232302131")
+    return Medico("Caio Fernando","719828213","caiofernando@gmail.com",endereco3,"232302131")
 
 def test_criar_medico_nome(medico_valido):
     try:
