@@ -1,6 +1,6 @@
 import pytest
 from projeto_equipe.models.medico import Medico
 
-@pytest.fixture
+#@pytest.fixture
 
-def criar_medico():
+#def criar_medico():
