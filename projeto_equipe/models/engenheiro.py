@@ -3,8 +3,13 @@ from projeto_equipe.models.funcionario import Funcionario
 
 class Engenheiro(Funcionario):
     def __init__(self, nome: str, telefone: str, email: str, endereco: Endereco, crea:str) -> None:
-        super().__init__(self.__verificar_nome, self.__verificar_telefone, self.__verificar_email, endereco)
+        super().__init__(nome, telefone, email, endereco)
         self.crea = self.__verificar_crea(crea)
+        self.telefone = self.__verificar_telefone(telefone)
+        self.nome = self.__verificar_nome(nome)
+        self.email = self.__verificar_email(email)
+       
+        
         
 
     def __verificar_nome(self,nome):
