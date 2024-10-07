@@ -8,7 +8,7 @@ endereco2=Endereco("Rua B","41","600","321021-213","Salvador")
 
 @pytest.fixture
 def engenheiro_valido():
-    return Engenheiro("Julio Cesar","7198291283","juliocesar@gmail.com",endereco2,"67732421")
+    return Engenheiro(1234,2123,122,endereco2,21331)
 
 
 def test_criar_engenheiro_nome(engenheiro_valido):

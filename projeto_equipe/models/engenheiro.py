@@ -20,7 +20,9 @@ class Engenheiro(Funcionario):
                 raise TypeError("O nome só pode ser uma string")
         except(ValueError,TypeError) as erro:
             print(erro)
+            
         return nome
+
     def __verificar_telefone(self,telefone):   
         try:
             if not telefone:
@@ -44,9 +46,9 @@ class Engenheiro(Funcionario):
     def __verificar_crea(self,crea):
         try:
             if not crea:
-                raise ValueError("O email não pode estar vazio")
+                raise ValueError("O crea não pode estar vazio")
             if not isinstance(crea,str):
-                raise TypeError("O email só pode ser uma string")
+                raise TypeError("O crea só pode ser uma string")
         except(ValueError,TypeError) as erro:
             print(erro)
         return crea
