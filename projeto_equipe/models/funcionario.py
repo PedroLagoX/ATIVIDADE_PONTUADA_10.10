@@ -1,6 +1,6 @@
 import os 
 from projeto_equipe.models.Endereco import Endereco
-from abc import ABC
+from abc import ABC, abstractmethod
 
 
 os.system("cls||clear")
@@ -11,6 +11,11 @@ class Funcionario(ABC):
         self.telefone=telefone
         self.email=email
         self.endereco=endereco
+
+
+    @abstractmethod
+    def salario_final(self):
+        pass
 
     
         

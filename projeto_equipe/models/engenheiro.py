@@ -8,10 +8,10 @@ class Engenheiro(Funcionario):
         self.telefone = self.__verificar_telefone(telefone)
         self.nome = self.__verificar_nome(nome)
         self.email = self.__verificar_email(email)
+
+
        
         
-        
-
     def __verificar_nome(self,nome):
         try:
             if not nome:
@@ -52,6 +52,9 @@ class Engenheiro(Funcionario):
         except(ValueError,TypeError) as erro:
             print(erro)
         return crea
-
+    
+    def salario_final(self):
+        return 7000.0
+    
     def __str__(self) -> str:
-        return (f"{super().__str__()} \nCREA: {self.crea}")
+        return (f"{super().__str__()} \nCREA: {self.crea},Salário Final: {self.salario_final()}")

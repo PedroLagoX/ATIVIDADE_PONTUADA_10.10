@@ -49,6 +49,8 @@ class Medico(Funcionario):
         except(ValueError,TypeError) as erro:
             print(erro)
         return crm
+    def salario_final(self):
+        return 8000.0
 
     def __str__(self) -> str:
-        return (f"{super().__str__()} \nCRM: {self.crm}")
+        return (f"{super().__str__()} \nCRM: {self.crm}, Salário Final: {self.salario_final}")
