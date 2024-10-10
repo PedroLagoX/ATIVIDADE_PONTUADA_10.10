@@ -5,7 +5,7 @@ from projeto_equipe.models.Endereco import Endereco
 @pytest.fixture
 
 def criar_endereco():
-    endereco_1 = Endereco("Rua A", "123", "ap0", "0000-000", "Salvador")
+    endereco_1 = Endereco("", "", "", "", "")
     return endereco_1
 
 def test_criar_endereco_logradouro(criar_endereco):
