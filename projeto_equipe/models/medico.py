@@ -1,4 +1,4 @@
-from projeto_equipe.models.Endereco import Endereco
+from projeto_equipe.models.endereco import Endereco
 from projeto_equipe.models.funcionario import Funcionario
 
 class Medico(Funcionario):
@@ -8,7 +8,7 @@ class Medico(Funcionario):
         self.telefone = self.__verificar_telefone(telefone)
         self.nome = self.__verificar_nome(nome)
         self.email = self.__verificar_email(email)
-
+      
     def __verificar_nome(self,nome):
         try:
             if not nome:
@@ -49,8 +49,9 @@ class Medico(Funcionario):
         except(ValueError,TypeError) as erro:
             print(erro)
         return crm
+    
     def salario_final(self):
-        return 8000.0
+        return 6000.0
 
     def __str__(self) -> str:
-        return (f"{super().__str__()} \nCRM: {self.crm}, Salário Final: {self.salario_final}")
+        return (f"{super().__str__()} \nCRM: {self.crm}, \nSalário Final: {self.salario_final()}")

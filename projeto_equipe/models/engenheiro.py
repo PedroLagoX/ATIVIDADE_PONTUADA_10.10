@@ -1,4 +1,4 @@
-from projeto_equipe.models.Endereco import Endereco
+from projeto_equipe.models.endereco import Endereco
 from projeto_equipe.models.funcionario import Funcionario
 
 class Engenheiro(Funcionario):
@@ -9,9 +9,6 @@ class Engenheiro(Funcionario):
         self.nome = self.__verificar_nome(nome)
         self.email = self.__verificar_email(email)
 
-
-       
-        
     def __verificar_nome(self,nome):
         try:
             if not nome:
@@ -57,4 +54,4 @@ class Engenheiro(Funcionario):
         return 7000.0
     
     def __str__(self) -> str:
-        return (f"{super().__str__()} \nCREA: {self.crea},Salário Final: {self.salario_final()}")
+        return (f"{super().__str__()} \nCREA: {self.crea},\nSalário Final: {self.salario_final()}")

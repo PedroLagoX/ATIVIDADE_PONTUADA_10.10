@@ -1,15 +1,15 @@
 class Endereco:
     def __init__(self, logradouro: str, numero: str, complemento: str, cep: str, cidade: str) -> None:
-        self.logradouro = self.__verificar_logradouro
-        self.numero = self.__verificar_numero
-        self.complemento = self.__verificar_complemento
-        self.cep = self.__verificar_cep
-        self.cidade = self.__verificar_cidade
+        self.logradouro = self.__verificar_logradouro(logradouro)
+        self.numero = self.__verificar_numero(numero)
+        self.complemento = self.__verificar_complemento(complemento)
+        self.cep = self.__verificar_cep(cep)
+        self.cidade = self.__verificar_cidade(cidade)
 
     def __verificar_logradouro(self,logradouro):
         try:
             if not logradouro:
-                raise ValueError("O logradouro não pode estar vazio")
+                raise ValueError("1O logradouro não pode estar vazio")
             if not isinstance(logradouro,str):
                 raise TypeError("O logradouro só pode ser uma string")
         except(ValueError,TypeError) as erro:

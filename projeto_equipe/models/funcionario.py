@@ -1,5 +1,5 @@
 import os 
-from projeto_equipe.models.Endereco import Endereco
+from projeto_equipe.models.endereco import Endereco
 from abc import ABC, abstractmethod
 
 
